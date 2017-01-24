@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var morgan = require('morgan');
 var bodyParser = require('body-parser')
 var cors = require('cors')
+var path = require('path');
 
 app.use(cors({origin: 'http://localhost:8080'}));
 
@@ -17,7 +18,7 @@ app.listen(8080);
 console.log("NodeJS server is running on port: 8080");
 
 app.get('*', function(req, res) {
-        (path.join(__dirname, '../public', 'index.html'));
+        (path.join(__dirname, '../public/', 'index.html'));
     });
 
 app.post('/', function(req, res){

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zip-test" default="zip" basedir=".">
+
+	<property name="folder-to-zip" value="*" />
+	<property name="unzip-destination" value="unzipped" />
+
+	<target name="zip">
+		<zip destfile="${project-name}.zip" basedir="${folder-to-zip}" excludes="dont*.*" />
+	</target>
+
+	<target name="unzip">
+		<unzip src="test.zip" dest="${unzip-destination}" />
+	</target>
+
+</project>
