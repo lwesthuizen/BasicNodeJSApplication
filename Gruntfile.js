@@ -4,7 +4,7 @@
     compress: {
   main: {
     options: {
-      archive: 'archive.zip'
+      archive: 'artifact.zip'
     },
     files: [{
       expand: true,
